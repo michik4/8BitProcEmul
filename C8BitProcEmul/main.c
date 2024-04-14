@@ -6,15 +6,15 @@ int main()
 {
     REG REG0;
     REG REG1;
-    unsigned out;
-    unsigned COUT;
+    unsigned char out;
+    unsigned char COUT;
     
-    unsigned prog[10] = {0};
+    unsigned char prog[10] = {0};
     short com;
-    unsigned val0;
-    unsigned val1;
+    unsigned char val0;
+    unsigned char val1;
     
-    val0 = 113;
+    val0 = 40;
     val1 = 128;
     
     printf("val0 = %u\nval1 = %u\n", val0, val1);
@@ -25,9 +25,9 @@ int main()
             return 0;   
         }
         ALU(com, val0, val1, &out);
+        printf("%u\n", NEG(val1));
+        printf("out = %u\n", out);
     }
-    printf("out = %u", out);
-    
     
     return 0;
 }
